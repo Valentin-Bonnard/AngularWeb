@@ -990,13 +990,6 @@ $(function(){TweenLite.defaultEase=Linear.easeNone,TweenLite.set(".square",{visi
 		
 })(jQuery);
 
-(function($){
-var trigger = $(".navTrigger");
-  
-  trigger.on("click",function(){
-    $(this).toggleClass("active");
-    $(this).next().toggleClass("active");
-  });
-})(jQuery);
+
 
 

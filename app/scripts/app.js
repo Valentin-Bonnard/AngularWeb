@@ -22,7 +22,6 @@ app.controller('controller', ['$scope', 'openweathermapFactory', function (scope
 
   let _appid = "105ac2b2036bdfbb8c6ae07ae71bbc79";
 
-
   weather.getWeatherFromCitySearchByName({
     q: "paris",
     appid: _appid,
@@ -30,13 +29,12 @@ app.controller('controller', ['$scope', 'openweathermapFactory', function (scope
   }).then(function (_data, _err) {
     if (!_err) {
       console.info("weather from city by name", _data.data.main.temp);
-      scope.city =  _data.data.name;
+      scope.city = _data.data.name;
       scope.degree = _data.data.main.temp;
     }
     else
       console.info("This is an error", _err);
   });
-
 }]);
 
 app.config(function ($routeProvider, $locationProvider) {
